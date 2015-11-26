@@ -19,7 +19,7 @@
 \DeclareMathOperator{\Cl}{Cl}
 \DeclareMathOperator{\Span}{Span}
 \newcommand{\kr}[2]{\left(\frac{#1}{#2}\right)}
-\usepackage{xspace}  % to allow for text macros that don't eat space 
+\usepackage{xspace}  % to allow for text macros that don't eat space
 \newcommand{\SAGE}{{\sf Sage}\xspace}
 \newcommand{\sage}{\SAGE} %used by sagetex! switch to renew if need sagetex package
 
@@ -43,7 +43,7 @@
 \par\noindent
 {\large W.\thinspace{}A. Stein}\\
 {\small Department of Mathematics, Harvard University}\vspace{1ex}\\
-#3     
+#3
 \vspace{2ex}\par
 }
 
@@ -55,7 +55,7 @@
 {\bf \LARGE #1}\\
 \vspace{3ex}
 \par\noindent
-#3     
+#3
 \vspace{5ex}\par
 }
 
@@ -64,7 +64,7 @@
 \newcommand{\esM}{\overline{\sM}}
 \newcommand{\sM}{\boldsymbol{\mathcal{M}}}
 \newcommand{\sS}{\boldsymbol{\mathcal{S}}}
-\newcommand{\sB}{\boldsymbol{\mathcal{B}}}       
+\newcommand{\sB}{\boldsymbol{\mathcal{B}}}
 \newcommand{\eE}{\mathbb{E}}
 \newcommand{\Adual}{A^{\vee}}
 \newcommand{\Bdual}{B^{\vee}}
@@ -156,11 +156,11 @@
 \DeclareMathOperator{\Sym}{Sym}
 \DeclareMathOperator{\Symb}{Symb}
 %\newcommand{\Sym}{\mathcal{S}{\rm ym}}
-\newcommand{\dw}{\delta(w)} 
-\newcommand{\dwh}{\widehat{\delta(w)}}      
-\newcommand{\dlwh}{\widehat{\delta_\l(w)}} 
-\newcommand{\dash}{-\!\!\!\!-\!\!\!\!-\!\!\!\!-} 
-\DeclareMathOperator{\tor}{tor}  
+\newcommand{\dw}{\delta(w)}
+\newcommand{\dwh}{\widehat{\delta(w)}}
+\newcommand{\dlwh}{\widehat{\delta_\l(w)}}
+\newcommand{\dash}{-\!\!\!\!-\!\!\!\!-\!\!\!\!-}
+\DeclareMathOperator{\tor}{tor}
 \newcommand{\Frobl}{\Frob_{\ell}}
 \newcommand{\tE}{\tilde{E}}
 \renewcommand{\l}{\ell}
@@ -231,7 +231,7 @@
 \newcommand{\smallmtwo}[4]{\left(
         \begin{smallmatrix}#1&#2\\#3&#4
         \end{smallmatrix}\right)}
-\newcommand{\twopii}{2\pi{}i{}}  
+\newcommand{\twopii}{2\pi{}i{}}
 \newcommand{\eps}{\varepsilon}
 \newcommand{\vphi}{\varphi}
 \newcommand{\gp}{\mathfrak{p}}
@@ -432,12 +432,23 @@
    }
 %end newenvironment
 
+% hint environment
 \newenvironment{hint}
 {[\emph{Hint}:}
 {\!]}
+%end newenvironment
+
+% hint environment
+% this is just so you can "fold" chapters
+% like functions in code.
+% It helps with a long file
+% note codefolding for codemirror comes from
+% http://codemirror.977696.n3.nabble.com/code-folding-for-latex-td4028923.html
+\newenvironment{ch}{}{}
+% end newenvironment
 
 \newcommand{\hd}[1]{\vspace{1ex}\noindent{\bf #1} }
-\newcommand{\nf}[1]{\underline{#1}} 
+\newcommand{\nf}[1]{\underline{#1}}
 \newcommand{\cbar}{\overline{c}}
 
 \DeclareMathOperator{\rad}{rad}
@@ -462,5 +473,3 @@
 \newcommand{\ilem}[1]{\index{Lemma!#1}\index{#1 lemma}}
 \newcommand{\icor}[1]{\index{Corollary!#1}\index{#1 corollary}}
 \newcommand{\magma}{\ii{{\sc Magma}}}
-
-
