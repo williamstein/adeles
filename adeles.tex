@@ -290,7 +290,7 @@ find that there is a unique $n$ such that
 $$
    0\leq x-nm <m.
 $$
-Since $x-nm\in G$ and $0<x-nm<m$, it follows
+Since $x-nm\in G$ and $0 \leq x-nm<m$, it follows
 that $x-nm=0$, so $x$ is a multiple of $m$.
 \end{proof}
 By Proposition~\ref{prop:discrete}, the set
@@ -475,7 +475,7 @@ by the triangle inequality,
      \leq& 1 + 1 + \cdots + 1 = n+1.
 \end{align*}
 Now take $n$th roots of both sides to get
-$$\abs{1+a} \leq \sqrt[n]{n},$$
+$$\abs{1+a} \leq \sqrt[n]{n+1},$$
 and take the limit as $n\to \infty$ to see
 that $\abs{1+a} \leq 1$.  This proves that one
 can take $C=1$ in Axiom (3), hence that $\absspc{}$
@@ -548,7 +548,7 @@ as claimed.
 $\absspc$, we may assume without loss that $\absspc$ satisfies the
 triangle inequality.  We first make some general remarks about any
 valuation that satisfies the triangle inequality.
-Suppose $a\in\Z$ is greater than $1$.  Consider, for any $b\in\Z$
+Suppose $a\in\Z$ is greater than $1$.  Consider, for any positive $b\in\Z$
 the base-$a$ expansion of $b$:
 $$
   b = b_m a^m + b_{m-1} a^{m-1} + \cdots + b_0,
@@ -571,7 +571,7 @@ inequality for $\absspc$, we have
         \cdot \max\left(1,\abs{a}^{\log(b)/\log(a)}\right),
 \end{align*}
 where in the last step we use that $m\leq \frac{\log(b)}{\log(a)}$.
-Setting $b=c^n$, for $c\in\Z$, in the above inequality and
+Setting $b=c^n$, for some positive $c\in\Z$, in the above inequality and
 taking $n$th roots, we have
 \begin{align*}
 \abs{c} &\leq \left( M\cdot
@@ -606,7 +606,7 @@ $$
 \abs{c} \leq \max\left(1,\abs{a}^{\frac{\log(c)}{\log(a)}}\right).
 $$
 
-Our assumption that $\absspc$ is archimedean implies
+By Lemma~\ref{lem:nonarch}, our assumption that $\absspc$ is archimedean implies
 that there is $c\in\Z$ with $c>1$ and $\abs{c}>1$.
 Then for all $a\in\Z$ with $a>1$ we have
 \begin{equation}\label{eqn:pow}
@@ -622,7 +622,7 @@ we see that
   \abs{c}^{\frac{1}{\log(c)}}
     \leq   \abs{a}^{\frac{1}{\log(a)}}.
 \end{equation}
-Because, as mentioned above, $\abs{a}>1$, we can interchange the roll
+Because, as mentioned above, $\abs{a}>1$, we can interchange the role
 of $a$ and $c$ to obtain the reverse inequality of (\ref{eqn:ineqac}).
 We thus have
 $$
@@ -649,7 +649,8 @@ by
   \abs{p^a \cdot \frac{u}{v}}_p = c^{-\deg(p)\cdot a},
 \end{equation}
 where $a\in\Z$ and $u,v\in k[t]$ with
-$p\nmid u$ and $p\nmid v$.
+$p\nmid u$ and $p\nmid v$. The integer $a$ is often denoted
+by $\ord_p(p^a \cdot \frac{u}{v})$.
 \begin{remark}
 This definition differs from the one page 46 of [Cassels-Frohlich,
 Ch. 2] in two ways.   First, we assume that $c>1$ instead
@@ -670,12 +671,12 @@ This definition differs from the one in \cite[pg.~46]{cassels:global}
 in two ways.  First, we assume that $c>1$ instead of $c<1$, since
 otherwise $\absspc_p$ does not satisfy Axiom 3 of a valuation.  Here's
 why: Recall that Axiom 3 for a non-archimedean valuation on $K$
-asserts that whenever $a\in K$ and $\abs{a}\leq 1$, then
-$\abs{a+1}\leq 1$.  Set $a=p-1$, where $p=p(t)\in K[t]$ is an
-irreducible polynomial.  Then $\abs{a}=c^0 = 1$, since $\ord_p(p-1) =
-0$.  However, $\abs{a+1} = \abs{p-1+1} = \abs{p}=c^{-1}>1$, since
+asserts that whenever $a\in K$ and $\abs{a}_p\leq 1$, then
+$\abs{a+1}_p\leq 1$.  Set $a=p-1$, where $p=p(t)\in K[t]$ is an
+irreducible polynomial.  Then $\abs{a}_p=c^0 = 1$, since $\ord_p(p-1) =
+0$.  However, $\abs{a+1}_p = \abs{p-1+1}_p = \abs{p}_p=c^{-\deg(p)}>1$, since
 $\ord_p(p) = 1$.  If we take $c>1$ instead of $c<1$, as I propose,
-then $\abs{p}=c^{-1}<1$, as required.
+then $\abs{p}_p=c^{-\deg(p)}<1$, as required.
 
 
 Note the (albeit imperfect) analogy between $K=k(t)$ and $\Q$.
